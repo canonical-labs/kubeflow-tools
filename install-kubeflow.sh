@@ -5,7 +5,7 @@ set -u  # fail on undeclared variables
 
 export KFAPP=${KFAPP:-my_kubeflow} # used to store the ksonnet artifacts (your kubeflow stack)
 export KS_VER=${KS_VER:-0.13.1}      # the version of ksonnet to use
-export KUBEFLOW_VERSION=${KUBEFLOW_VERSION:-v0.3.5}  # the version of kubeflow to use
+export KUBEFLOW_VERSION=${KUBEFLOW_VERSION:-0.3.5}  # the version of kubeflow to use
 export KUBEFLOW_SRC=${KUBEFLOW_SRC:-"${HOME}/kubeflow/${KUBEFLOW_VERSION}"}
 
 # Grab the directory of the scripts, in case the script is invoked from a different path
@@ -37,7 +37,7 @@ function download_kubeflow() {
     info "Creating Kubeflow source directory: ${KUBEFLOW_SRC}"
     mkdir -p ${KUBEFLOW_SRC}
     pushd ${KUBEFLOW_SRC}
-    curl https://raw.githubusercontent.com/kubeflow/kubeflow/${KUBEFLOW_VERSION}/scripts/download.sh | bash
+    curl https://raw.githubusercontent.com/kubeflow/kubeflow/v${KUBEFLOW_VERSION}/scripts/download.sh | bash
     popd
   else
     info "Skipping Kubeflow download - source directory already exists: ${KUBEFLOW_SRC}"
