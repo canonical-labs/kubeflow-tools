@@ -4,7 +4,7 @@ Simple scripts and instructions for getting the most out of your kubeflow cluste
 
 ## Common Usage
 
-After installing kubernetes (e.g. using [kubernete-tools](https://github.com/canonical-labs/kubernetes-tools)), you can use this repo to install Kubeflow. Here's a simple example:
+After installing kubernetes (e.g. using [kubernetes-tools](https://github.com/canonical-labs/kubernetes-tools)), you can use this repo to install Kubeflow. Here's a simple example:
 
 ```
 git clone https://github.com/canonical-labs/kubeflow-tools
