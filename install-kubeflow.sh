@@ -5,7 +5,7 @@ set -u  # fail on undeclared variables
 
 export KFAPP=${KFAPP:-my_kubeflow} # used to store the ksonnet artifacts (your kubeflow stack)
 export KS_VER=${KS_VER:-0.13.1}      # the version of ksonnet to use
-export KUBEFLOW_VERSION=${KUBEFLOW_VERSION:-0.3.5}  # the version of kubeflow to use
+export KUBEFLOW_VERSION=${KUBEFLOW_VERSION:-0.4.1}  # the version of kubeflow to use
 export KUBEFLOW_SRC=${KUBEFLOW_SRC:-"${HOME}/kubeflow/${KUBEFLOW_VERSION}"}
 
 # Grab the directory of the scripts, in case the script is invoked from a different path
@@ -71,7 +71,7 @@ function customize_kubeflow() {
   ks param set ambassador ambassadorServiceType NodePort
   # Don't need to expose jupyterhub directly .. can access through ambassador.
   # But leaving it hear for illustration
-  ks param set jupyterhub serviceType NodePort
+  ks param set jupyter serviceType NodePort
 
   # Other components can be installed with 'ks pkg install / ks generate'
   # ...
