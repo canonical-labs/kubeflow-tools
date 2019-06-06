@@ -18,6 +18,6 @@ At the end of the install you can access the Kubeflow UI through the ambassador 
 
 ![install-kubeflow result](docs/images/kubeflow-install-result.png)
 
-From there you can go to your browser and enter the IP address of the machine you install kubernetes on, with the Ambassador Port (ie 30105) and you will be presented with something like this:
+From there you can go to your browser and enter the IP address of the machine you install kubernetes on, with the Ambassador Port (ie 30124) and you will be presented with something like this:
 
 ![Kubeflow UI](docs/images/kubeflow-main-ui.png)

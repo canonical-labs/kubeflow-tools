@@ -14,7 +14,7 @@ SCRIPTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 function print_ports() {
   # Print port information
   AM_PORT=`kubectl get svc -n=kubeflow -o go-template='{{range .items}}{{if eq .metadata.name "ambassador"}}{{(index .spec.ports 0).nodePort}}{{"\n"}}{{end}}{{end}}'`
-  JH_PORT=`kubectl get svc -n=kubeflow -o go-template='{{range .items}}{{if eq .metadata.name "tf-hub-lb"}}{{(index .spec.ports 0).nodePort}}{{"\n"}}{{end}}{{end}}'`
+  JH_PORT=`kubectl get svc -n=kubeflow -o go-template='{{range .items}}{{if eq .metadata.name "jupyter-lb"}}{{(index .spec.ports 0).nodePort}}{{"\n"}}{{end}}{{end}}'`
   echo ""
   echo "Ambassador Port: ${AM_PORT} ==> Access default Kubeflow UIs"
   echo "JupyterHub Port: ${JH_PORT} ==> Access JupyerHub directly"
