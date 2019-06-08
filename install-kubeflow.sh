@@ -3,9 +3,9 @@
 set -e  # exit immediately on error
 set -u  # fail on undeclared variables
 
-export KFAPP=${KFAPP:-my_kubeflow} # used to store the ksonnet artifacts (your kubeflow stack)
+export KFAPP=${KFAPP:-mykubeflow} # used to store the ksonnet artifacts (your kubeflow stack)
 export KS_VER=${KS_VER:-0.13.1}      # the version of ksonnet to use
-export KUBEFLOW_VERSION=${KUBEFLOW_VERSION:-0.4.1}  # the version of kubeflow to use
+export KUBEFLOW_VERSION=${KUBEFLOW_VERSION:-0.5.1}  # the version of kubeflow to use
 export KUBEFLOW_SRC=${KUBEFLOW_SRC:-"${HOME}/kubeflow/${KUBEFLOW_VERSION}"}
 
 # Grab the directory of the scripts, in case the script is invoked from a different path
